@@ -1,3 +1,6 @@
+<?php 
+$menu = menu(); 
+?>
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -13,15 +16,15 @@
     <title>Szakdolgozat</title>
 </head>
 <body>
+    <?php include "./front/menu.php"; ?>
     <nav class = "menuflex">
         <input type = "checkbox" id = "check">
 
         <label class = "logo">PORTFOLIO</label>
         <ul>
-            <li><a href='./?menu=about_me'>About me</a></li>
-            <li><a href='./?menu=programing'>Programing</a></li>
-            <li><a href='./?menu=web_development'>Web development</a></li>
-            <li><a href='./?menu=hobbies'>Hobbies</a></li>
+        <?php foreach($menu as $m): ?>
+            <li><a href='./?menu=<?= $m['link']?>'><?= $m['text_key']?></a></li>
+        <?php endforeach; ?>
         </ul>
         <label for = "check" class = "checkbtn">   
             <i class="fa-solid fa-bars"></i>

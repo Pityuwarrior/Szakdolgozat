@@ -1,3 +1,4 @@
 <?php 
-include("./front/header.php");
-include("./front/footer.php");
+require_once "./back/db_function.php";
+require_once "./front/header.php";
+require_once "./front/footer.php";
