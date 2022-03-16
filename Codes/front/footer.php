@@ -1,3 +1,4 @@
+</main>
 <footer>
     <button id = "up" value = "value">
         <i class="fa-solid fa-circle-arrow-up"></i>

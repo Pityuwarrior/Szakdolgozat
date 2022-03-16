@@ -51,9 +51,41 @@ nav ul li a{
     border-radius: 3px;
     text-transform: uppercase;
 }
+.current{
+    color: darkblue;
+}
 a:hover{
     background: #1b9bff;
     transition: .5s;
+}
+main{
+    padding-top: 30px;
+    margin: auto;
+    align-content: center;
+    max-width: 70%;
+}
+.flex_aboutme{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.text_item{
+    border-radius: 25px;
+    border: 2px solid #000000;
+    box-shadow: -5px -5px 30px 5px red, 5px 5px 30px 5px blue;
+    word-break: normal;
+    padding: 7px;
+    background-color: #aa0069;
+}
+.pic_item{
+    border-radius: 25px;
+    box-shadow: -5px -5px 30px 5px red, 5px 5px 30px 5px blue;
+    background-color: #aa0069;
+}
+.pic_item img{
+    border-radius: 25px;
+    border: 2px solid #000000;
+    max-width: 300px;
 }
 .checkbtn{
     font-size: 30px;
@@ -94,6 +126,7 @@ display: none;
     }
 }
 @media (max-width: 858px){
+    
     .checkbtn{
         display: block;
     }
@@ -122,5 +155,12 @@ display: none;
     }
     #check:checked ~ ul{
         left: 0;
+    }
+    .flex_aboutme{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .pic_item{
+        justify-items: center;
     }
 }

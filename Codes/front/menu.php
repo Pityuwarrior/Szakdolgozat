@@ -6,7 +6,6 @@ if(isset($_GET['menu']))
     {
         [$page] = $menuitem;
     }
-    
 }
 $content = "./front/pages/$page.php";
 ?>

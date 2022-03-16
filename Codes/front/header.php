@@ -19,17 +19,17 @@ $menu = menu();
     <?php include "./front/menu.php"; ?>
     <nav class = "menuflex">
         <input type = "checkbox" id = "check">
-
         <label class = "logo">PORTFOLIO</label>
         <ul>
         <?php foreach($menu as $m): ?>
-            <li><a href='./?menu=<?= $m['link']?>'><?= $m['text_key']?></a></li>
+            <li class = "<?= $_GET['menu'] === $m['link'] ? 'current' : '' ?>"><a href='./?menu=<?= $m['link']?>'><?= $m['text_key']?></a></li>
         <?php endforeach; ?>
         </ul>
         <label for = "check" class = "checkbtn">   
             <i class="fa-solid fa-bars"></i>
         </label>
     </nav>
+<main>
 
 
  
