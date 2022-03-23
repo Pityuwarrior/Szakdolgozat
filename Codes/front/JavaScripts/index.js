@@ -43,3 +43,29 @@ valami.button.addEventListener("click", () =>{
 window.addEventListener("scroll",  () =>{
     valami.checkPagePosition();
 });
+class scrollBlock{  
+    disable(){
+        document.documentElement.classList.add('disable-scroll');
+        document.body.classList.add('disable-scroll');
+    }
+      
+    enable(){
+        document.documentElement.classList.remove('disable-scroll');
+        document.body.classList.remove('disable-scroll');
+    }
+    
+    constructor(){  
+        const check = document.querySelector('#check');
+        check.addEventListener('click', () =>{
+            if(check.checked)
+            {
+                this.disable();
+            }
+            else
+            {
+                this.enable();
+            }
+        });
+    }
+}
+const scrollblock = new scrollBlock();
