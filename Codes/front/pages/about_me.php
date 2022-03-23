@@ -1,3 +1,6 @@
+<section class = "banner-area">
+        <div class = "banner-img"></div>
+</section>
 <div class="flex_aboutme">
     <div class = "pic_item"><img src = "./front/Resources/img/p_aboutme.png" alt = "me"></div>
     <div class = "text_item">

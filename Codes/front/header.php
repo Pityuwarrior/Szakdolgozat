@@ -22,7 +22,7 @@ $menu = menu();
         <label class = "logo">PORTFOLIO</label>
         <ul>
         <?php foreach($menu as $m): ?>
-            <li class = "<?= $_GET['menu'] === $m['link'] ? 'current' : '' ?>"><a href='./?menu=<?= $m['link']?>'><?= $m['text_key']?></a></li>
+            <li><a class = "<?= $_GET['menu'] === $m['link'] ? 'current' : '' ?>" href='./?menu=<?= $m['link']?>'><?= $m['text_key']?></a></li>
         <?php endforeach; ?>
         </ul>
         <label for = "check" class = "checkbtn">   

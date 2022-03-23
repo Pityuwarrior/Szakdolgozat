@@ -9,6 +9,24 @@ body{
     font-family: 'Be Vietnam Pro', sans-serif;
     background-color: rgb(60, 60, 60);
 }
+.banner-area{
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+.banner-area .banner-img{
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Resources/img/background.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 94%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+}
 /*
 nav{
     background: #293138;
@@ -54,24 +72,23 @@ nav ul li a{
     text-transform: uppercase;
 }
 a:hover{
-    background:white;
-    transition: .5s;
-    color: #000000;
+    transition: .2s;
+    color: #00b7ff;
 }
 .current{
     background:white;
     color: #000000;
     border-radius: 25px;
-    padding:  0 5px;
 }
 main{
+ 
+}
+.flex_aboutme{
+    display: flex;
     padding-top: 30px;
     margin: auto;
     align-content: center;
     max-width: 70%;
-}
-.flex_aboutme{
-    display: flex;
     justify-content: center;
     gap: 50px;
 }
@@ -168,5 +185,13 @@ display: none;
     }
     .pic_item{
         justify-items: center;
+    }
+    a:hover{
+        transition: .2s;
+        color: #00b7ff;
+    }
+    .current{
+        color: #00b7ff;
+        background: none ;
     }
 }
