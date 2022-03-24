@@ -1,5 +1,6 @@
 <?php 
-$menu = menu(); 
+$menu = menu();
+require_once "./back/language.php";
 ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -23,7 +24,10 @@ $menu = menu();
         <ul>
         <?php foreach($menu as $m): ?>
             <li><a class = "<?= $page === $m['link'] ? 'current' : '' ?>" href='./?menu=<?= $m['link']?>'><?= $m['text_key']?></a></li>
-        <?php endforeach; ?>
+        <?php endforeach;
+            $otherlang = $lang === "hu" ? "en" : "hu";
+        ?>
+            <li><a class = "language" href="./?menu=<?=$page?>&lang=<?=$otherlang?>"><?=$otherlang?></a></li>
         </ul>
         <label for = "check" class = "checkbtn">   
             <i class="fa-solid fa-bars"></i>

@@ -1,4 +1,4 @@
-class scrollToTop{
+class ScrollToTop{
 
     constructor(){
        this.button = document.getElementById('up');
@@ -35,7 +35,7 @@ class scrollToTop{
         });
     }
 }
-const valami = new scrollToTop();
+const valami = new ScrollToTop();
 valami.checkPagePosition();
 valami.button.addEventListener("click", () =>{
     valami.buttonPush();
@@ -43,7 +43,7 @@ valami.button.addEventListener("click", () =>{
 window.addEventListener("scroll",  () =>{
     valami.checkPagePosition();
 });
-class scrollBlock{  
+class ScrollBlock{  
     disable(){
         document.documentElement.classList.add('disable-scroll');
         document.body.classList.add('disable-scroll');
@@ -68,4 +68,31 @@ class scrollBlock{
         });
     }
 }
-const scrollblock = new scrollBlock();
+const scrollblock = new ScrollBlock();
+
+class ScrollDown{
+
+    constructor(){
+       this.button = document.getElementById('down');
+       this.el = document.querySelector(".flex_aboutme");
+    }
+
+    buttonPush(){
+        const pos = this.el.getBoundingClientRect().top 
+        document.documentElement.scrollTo({
+            top: pos + document.documentElement.scrollTop,
+            left: 0,
+            behavior: 'smooth'
+        });
+        document.body.scrollTo({
+            top: pos + document.body.scrollTop,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+}
+const down = new ScrollDown();
+down.button.addEventListener("click", () =>{
+    down.buttonPush();
+});
+    

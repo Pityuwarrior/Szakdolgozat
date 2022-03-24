@@ -15,7 +15,7 @@ body{
     height: calc(100vh + 60px);
     color: #fff;
     text-align: center;
-    z-index: -1;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
@@ -52,6 +52,8 @@ body{
     height: 100%;
 }
 nav{
+    z-index: 3;
+    position: relative;
     /*background-color: rgb(40, 40, 40, 0.5); */
     background-color: #16171c;
     height: 60px;
@@ -83,7 +85,6 @@ nav ul li{
     line-height: 60px;
     padding:  0 5px;
     white-space: nowrap;
-    overflow: hidden;
     flex: 1 1 auto;
 }
 nav ul li a{
@@ -94,6 +95,10 @@ nav ul li a{
     border-radius: 25px;
     text-transform: uppercase;
 }
+.language{
+    border: 1px white solid;
+    border-radius: 10px;
+}
 a:hover{
     transition: .2s;
     color: #00b7ff;
@@ -101,7 +106,7 @@ a:hover{
 .current{
     background:white;
     color: #000000;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 .flex_aboutme{
     display: flex;
@@ -152,12 +157,28 @@ a:hover{
 #check{
 display: none;
 }
+.banner-button{
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 20px
+}
+#down{
+    z-index: 2;
+    position: relative;
+    font-size: 100px;
+	color: white;
+	background-color: transparent;
+    border:0;
+}
 #up {
-	position: fixed;
+	z-index: 1;
+    position: fixed;
 	right: 50px;
 	bottom: 45px;
     font-size: 50px;
-	color: #000120;
+	color: white;
 	background-color: transparent;
     border:0;
 	height: 30px;
@@ -166,8 +187,8 @@ display: none;
 	padding: 10px;
     text-decoration: none;
 }
-#up:hover {
-	color: #0008f7;
+#up:hover, #down:hover {
+	color: #16171c;
 }
 @media (max-width: 970px){
     label.logo{

@@ -2,7 +2,12 @@
     <div class = "banner-text">
         <h1>Én vagyok Grút!</h1>
         <h2>OKJ-s fogyatékos</h2>
-    </div>    
+    </div>
+    <div class = "banner-button">
+        <button id = "down" value = "value">
+            <i class="fa-solid fa-circle-arrow-down"></i>
+        </button>
+    </div>  
     <div class = "banner-img"></div>
 </section>
 <section class = "flex_aboutme">
