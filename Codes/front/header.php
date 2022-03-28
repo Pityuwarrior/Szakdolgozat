@@ -23,7 +23,7 @@ require_once "./back/language.php";
         <label class = "logo">PORTFOLIO</label>
         <ul>
         <?php foreach($menu as $m): ?>
-            <li><a class = "<?= $page === $m['link'] ? 'current' : '' ?>" href='./?menu=<?= $m['link']?>'><?= $m['text_key']?></a></li>
+            <li><a class = "<?= $page === $m['link'] ? 'current' : '' ?>" href='./?menu=<?= $m['link']?>'><?= wraptrans($m['text_key'])?></a></li>
         <?php endforeach;
             $otherlang = $lang === "hu" ? "en" : "hu";
         ?>

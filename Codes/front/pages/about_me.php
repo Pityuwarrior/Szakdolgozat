@@ -1,6 +1,9 @@
+<?php
+$about_me = about_me();
+?>
 <section class = "banner-area">
     <div class = "banner-text">
-        <h1>Én vagyok Grút!</h1>
+        <h1><?= $about_me['text.aboutme_name']?></h1>
         <h2>OKJ-s fogyatékos</h2>
     </div>
     <div class = "banner-button">

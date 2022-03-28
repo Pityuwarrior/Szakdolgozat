@@ -191,3 +191,31 @@ function menu(){
     $result = $e->fetchAll();
     return $result;
 }
+function about_me(){
+    $sql = <<<SQL
+    SELECT 
+    page,
+    title
+    FROM page
+    SQL;
+    $e = connect ()->query($sql);
+    $e->execute();
+    $result = $e->fetch(PDO::FETCH_ASSOC);
+    return $result;
+}
+function menutrans($m){
+    global $lang;
+    $qmarks = implode(', ', array_map(fn() => '?', $m));
+    $sql = <<<SQL
+    SELECT 
+    text_key,
+    text_$lang as text_lang
+    FROM text
+    WHERE text_key IN ($qmarks);
+    SQL;
+    $e = connect ()->prepare($sql);
+    $e->execute($m);
+    $result = $e->fetchAll();
+    return $result;
+}
+
