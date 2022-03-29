@@ -1,6 +1,7 @@
 <?php 
 $menu = menu();
 require_once "./back/language.php";
+include "./front/menu.php";
 ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -13,11 +14,10 @@ require_once "./back/language.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,200;0,400;0,700;1,400;1,700&family=Inter:wght@800&display=swap" rel="stylesheet">
-    
-    <title>Szakdolgozat</title>
+    <title><?=$title?></title>
 </head>
 <body>
-    <?php include "./front/menu.php"; ?>
+
     <nav class = "menuflex">
         <input type = "checkbox" id = "check">
         <label class = "logo">PORTFOLIO</label>

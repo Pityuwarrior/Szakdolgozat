@@ -191,19 +191,19 @@ function menu(){
     $result = $e->fetchAll();
     return $result;
 }
-function about_me(){
+function page($page){
     $sql = <<<SQL
     SELECT 
-    page,
     title
     FROM page
+    where page = ?;
     SQL;
-    $e = connect ()->query($sql);
-    $e->execute();
+    $e = connect ()->prepare($sql);
+    $e->execute([$page]);
     $result = $e->fetch(PDO::FETCH_ASSOC);
     return $result;
 }
-function menutrans($m){
+function pagetrans($m){
     global $lang;
     $qmarks = implode(', ', array_map(fn() => '?', $m));
     $sql = <<<SQL
@@ -216,6 +216,7 @@ function menutrans($m){
     $e = connect ()->prepare($sql);
     $e->execute($m);
     $result = $e->fetchAll();
+
     return $result;
 }
 

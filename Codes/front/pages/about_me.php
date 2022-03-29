@@ -1,10 +1,10 @@
-<?php
-$about_me = about_me();
-?>
 <section class = "banner-area">
     <div class = "banner-text">
-        <h1><?= $about_me['text.aboutme_name']?></h1>
-        <h2>OKJ-s fogyatékos</h2>
+        <h1>
+            <span class = im><?=wraptrans('text.aboutme_im')?></span>
+            <?=wraptrans('text.aboutme_name')?>
+        </h1>
+        <h2><?=wraptrans('text.aboutme_proffesion')?></h2>
     </div>
     <div class = "banner-button">
         <button id = "down" value = "value">

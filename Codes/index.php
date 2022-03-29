@@ -7,6 +7,6 @@ require_once $content;
 require_once "./front/footer.php";
 $pagecontent = ob_get_clean();
 $transkey = (extractkeys($pagecontent));
-$menutrans = menutrans($transkey);
-$maptrans = maptrans($menutrans);
+$pagetrans = pagetrans($transkey);
+$maptrans = maptrans($pagetrans);
 echo finaltrans($pagecontent, $maptrans);

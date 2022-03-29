@@ -1,5 +1,5 @@
 <?php
-$regx = "/###([a-z.]+)###/";
+$regx = "/###([a-z._]+)###/";
 function wraptrans($m)
 {
     return "###$m###";
@@ -10,10 +10,10 @@ function extractkeys($m)
     preg_match_all($regx, $m, $menutext);
     return array_map(fn ($k) => preg_replace($regx, '$1', $k), $menutext[1]);
 }
-function maptrans($menutrans)
+function maptrans($pagetrans)
 {
     $translations = [];
-    foreach ($menutrans as $value) {
+    foreach ($pagetrans as $value) {
         $translations[$value['text_key']] = $value['text_lang'];
     }
     return $translations;

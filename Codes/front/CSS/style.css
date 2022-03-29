@@ -33,9 +33,24 @@ body{
 }
 .banner-area .banner-text h1{
     font-size: 50px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.banner-area .banner-text h1 .im{
+    font-size: 35px;
+    display: block;
+    text-align: left;
+}
+.banner-area .banner-text h1:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -100%;
+    right: 0;
+    border: 1px solid;
 }
 .banner-area .banner-text h2{
-    padding-left: 5px;
+    padding-left: 10px;
 }
 .banner-area + *{
     margin-top: 100vh !important;

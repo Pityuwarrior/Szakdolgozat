@@ -8,4 +8,6 @@ if(isset($_GET['menu']))
     }
 }
 $content = "./front/pages/$page.php";
+$p = page($page);
+$title = wraptrans($p["title"]);
 ?>
