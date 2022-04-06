@@ -2,9 +2,10 @@
 $menu = menu();
 require_once "./back/language.php";
 include "./front/menu.php";
+$htmllang = $lang === "hu" ? "hu" : "en";
 ?>
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="<?=$htmllang?>">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

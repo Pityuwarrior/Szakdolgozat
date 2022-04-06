@@ -5,9 +5,17 @@
     list-style: none;
     box-sizing: border-box;
 }
+html{
+    height: 100%;
+}
 body{
     font-family: 'Be Vietnam Pro', sans-serif;
     background-color: rgb(60, 60, 60);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100%;
+    margin: auto;
 }
 .banner-area{
     margin-top: -60px;
@@ -87,6 +95,7 @@ label.logo{
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
+    flex: 0 0 auto;
 }
 nav ul{
     padding-right: 20px;
@@ -129,11 +138,21 @@ a:hover{
     margin: auto;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 30px;
     height: 100vh;
     padding: 10%;
 }
-.flex_aboutme .flex_inner{
+.flex_hobby, .flex_inner, .flex_programming{
+    display: flex;
+    box-sizing: border-box;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.flex_inner, .flex_progtext{
     display: flex;
     box-sizing: border-box;
     margin: auto;
@@ -147,14 +166,40 @@ a:hover{
     color: rgb(238, 238, 238);
     border-radius: 15px;
     word-break: normal;
-    padding: 40px;
-    flex-basis: 70%;
+    padding-right: 30px;
+    flex-basis: 80%;
 }
-.pic_item{
+.flex_programming .flex_progtext{
+
+} 
+.flex_inner .flex_video_outer{
+    flex-basis: 100%;
+    padding: 2%;
+    display: block;
+}
+.flex_inner .video_item{
+    background-color: #000000;
+}
+.flex_inner .pic_item, .flex_inner .video_item{
+    position: relative;
+    padding-top: 56.25%;
+    width: 100%;
+    display: block;
+}
+.flex_inner .video_item .video{
+    display: block;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000000;
+}
+.flex_inner .pic_item{
     padding: 10px;
     flex-grow: 0;
 }
-.pic_item img{
+.flex_inner .pic_item img{
     display: block;
     border-radius: 15px;
     border: 2px solid #000000;
@@ -202,6 +247,18 @@ display: none;
 	padding: 10px;
     text-decoration: none;
 }
+footer{
+
+    background-color: #16171c;
+    position: static;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
 #up:hover, #down:hover {
 	color: #16171c;
 }
@@ -246,14 +303,14 @@ display: none;
     #check:checked ~ ul{
         left: 0;
     }
-    .flex_aboutme{
+    .flex_aboutme, .flex_hobby{
         flex-direction: column;
         gap: 30px;
     }
-    .pic_item{
+    .pic_item, .video_item{
         justify-items: center;
     }
-    .pic_item img{
+    .pic_item img, .video{
         margin: auto;
     }
     a:hover{
@@ -267,7 +324,7 @@ display: none;
     .disable-scroll{
         overflow-y: hidden;
     }
-    .flex_aboutme .flex_inner{
+    .flex_inner{
         display: block;
         background-color: unset;
         border: unset;
@@ -277,5 +334,7 @@ display: none;
         background-color: #535353;
         box-shadow: 2px 2px black;
         padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
