@@ -142,17 +142,20 @@ a:hover{
     height: 100vh;
     padding: 10%;
 }
-.flex_hobby, .flex_inner, .flex_programming{
+.flex_hobby, .flex_inner, .flex_programming_c, .flex_programming_java, .flex_webdevelop{
     display: flex;
     box-sizing: border-box;
     margin: auto;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
-.flex_inner, .flex_progtext{
+.flex_programming_c{
+    margin-bottom: 40px;
+}
+.flex_inner{
     display: flex;
     box-sizing: border-box;
     margin: auto;
@@ -169,9 +172,9 @@ a:hover{
     padding-right: 30px;
     flex-basis: 80%;
 }
-.flex_programming .flex_progtext{
-
-} 
+.flex_progtext, .flex_webtext{
+    color: rgb(238, 238, 238);;
+}
 .flex_inner .flex_video_outer{
     flex-basis: 100%;
     padding: 2%;
@@ -203,7 +206,7 @@ a:hover{
     display: block;
     border-radius: 15px;
     border: 2px solid #000000;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
 }
 .checkbtn{
@@ -330,11 +333,17 @@ footer p{
         border: unset;
         box-shadow: none;
     }
-    .text_item{
+    .text_item, .flex_progtext, .flex_webtext{
         background-color: #535353;
         box-shadow: 2px 2px black;
         padding: 20px;
         margin-top: 20px;
         margin-bottom: 20px;
     }
+    .flex_progtext, .flex_webtext{
+        border-radius: 15px;
+        background-color: #535353;
+        box-shadow: 2px 2px black;
+    }
+
 }
