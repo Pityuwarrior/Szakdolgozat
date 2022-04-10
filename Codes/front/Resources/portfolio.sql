@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2022 at 08:23 PM
+-- Generation Time: Apr 10, 2022 at 11:53 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -85,18 +85,19 @@ CREATE TABLE `text` (
 INSERT INTO `text` (`id`, `text_key`, `text_hu`, `text_en`) VALUES
 (1, 'menu.aboutme', 'Rólam', 'About me'),
 (2, 'menu.prog', 'Programozás', 'Programming'),
-(3, 'menu.web', 'Webfejlesztés', 'Web develop'),
+(3, 'menu.web', 'Webfejlesztés', 'Web development'),
 (4, 'menu.hobby', 'Hobbik', 'Hobbies'),
 (5, 'text.aboutme_im', 'A nevem', 'I\'m'),
 (6, 'text.aboutme_proffesion', 'Szoftverfejlesztő', 'Software Developer'),
 (7, 'text.aboutme', 'Rólam', 'About me'),
-(8, 'text.aboutme_text', 'Rólam azt kell tudni….', 'I\'m an program….'),
-(9, 'text.c', 'C#...', 'C#...'),
-(10, 'text.java', 'Java…', 'Java…'),
-(11, 'text.web', 'Web…', 'Web…'),
-(12, 'text.hobbies', 'A hobbim a videóvá…', 'My hobby is video ed…'),
+(8, 'text.aboutme_text', 'Szoftverfejlesztő tanuló vagyok, aki sosem hátrál az új kihívásoktól és lehetőségektől. Van tapasztaltom többek között:  C#, java, html, css, php, JavaScript és MySQL nyelvekből. \r\nElérhetőségem: nove.norbert2002@gmail.com  \r\n', 'I’m a software developer student, who is not afraid of new challenges and opportunities. I have some experience in: C#, java, html, css, php, JavaScript és MySQL languages.\r\nContact me: nove.norbert2002@gmail.com  \r\n'),
+(9, 'text.c', 'C# nyelvben készítettem egy szoftvert, amely egy nyúl tenyészet adatai vannak.  Lehetséges az adatokat felvenni és szerkeszteni és keresni. ', 'In C# I have created a software, which has data about rabbit breeding. It has the opportunity to insert, edit and search in the data.  '),
+(10, 'text.java', 'Java nyelven készítettem egy autókkal foglalkozó szoftvert. Feladata, hogy két táblát összekötve adatokat jelenítsen meg. Lehetőség van az adatok módosítására, és felvételére. ', 'In Java I have created a software with car topic. 2 tables are connected in the database, which are editable and new data is insertable'),
+(11, 'text.web', 'Ez a weboldal volt az eddigi legnagyobb projektem. A teljes weboldal nyíltforráskódú.', 'This site was my biggest project yet. The whole website is open source.'),
+(12, 'text.hobbies', 'Videóvágással több mint 5 éve foglalkozom hobbiszinten. Rengeteg témájú videót készítettem már, mint gameplay, montage, showcase és még rengeteg más.', 'I have been creating videos as a hobby for more than 5 years.  I have made videos in different topics like gameplay, montage, showcase and about lots of awesome stuff. '),
 (14, 'text.aboutme_name', 'Nové Norbert István', 'Norbert Istvan Nove'),
-(15, 'footer_text', 'Az oldalt Nové Norbert István készítette.', 'The page was made by Norbert Istvan Nove.');
+(15, 'footer_text', 'Az oldalt Nové Norbert István készítette.', 'The page was made by Norbert Istvan Nove.'),
+(16, 'text.hobbies_videoediting', 'Videóvágás ', 'Video editing ');
 
 --
 -- Indexes for dumped tables
@@ -147,7 +148,23 @@ ALTER TABLE `page`
 -- AUTO_INCREMENT for table `text`
 --
 ALTER TABLE `text`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `menu`
+--
+ALTER TABLE `menu`
+  ADD CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`text_key`) REFERENCES `text` (`text_key`);
+
+--
+-- Constraints for table `page`
+--
+ALTER TABLE `page`
+  ADD CONSTRAINT `page_ibfk_1` FOREIGN KEY (`title`) REFERENCES `text` (`text_key`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
