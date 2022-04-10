@@ -15,10 +15,10 @@
 </section>
 <section class = "flex_aboutme">
         <div class = "flex_inner">
-            <div class = "pic_item"><img src = "./front/Resources/img/p_aboutme.png" alt = "me"></div>
+            <div class = "pic_item"><img src = "./front/Resources/img/p_aboutme.jpg" alt = "me"></div>
             <div class = "text_item">
-                <h3>Rólam szöveg</h3>
-                <p>###I am a professional zegz-er, You might ask what does that mean, well it does not matter what it does matter is that I can do it professionally so lick my boots please. While you're there look at my portfolio you won't regret it you'll find a talented man's art and that would be me.###</p>
+                <h3><?=wraptrans('text.aboutme')?></h3>
+                <p><?=wraptrans('text.aboutme_text')?></p>
             </div>
         </div>
 </section>
